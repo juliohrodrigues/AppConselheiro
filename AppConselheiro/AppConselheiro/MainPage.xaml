@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppConselheiro.MainPage"
+             Title="Conselheiro">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Histórico" x:Name="btnHistorico" Clicked="btnHistorico_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <Frame>
+            <StackLayout>
+                <Image Source="https://imagensemoldes.com.br/wp-content/uploads/2018/06/Aladdin-G%C3%AAnio.png" />
+                <Frame BorderColor="#ccc" CornerRadius="10">
+                    <Label Text="{Binding Texto}" x:Name="lbl_conselho"  FontSize="Large" />
+                </Frame>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Copiar Texto" x:Name="btn_CopiarTexto" Clicked="btn_CopiarTexto_Clicked" />
+                    <Button Text="Novo Conselho" x:Name="btn_novoConselho" Clicked="btn_novoConselho_Clicked" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
